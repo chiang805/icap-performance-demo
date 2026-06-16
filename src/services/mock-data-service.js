@@ -38,6 +38,10 @@ export class MockDataService extends DataService {
     return mockData.workLogs;
   }
 
+  async getWorkLogPresets() {
+    return mockData.workLogPresets;
+  }
+
   async getApprovals() {
     return mockData.approvals;
   }

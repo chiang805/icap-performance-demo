@@ -89,6 +89,10 @@ export class SupabaseDataService extends DataService {
     return this.table("work_log");
   }
 
+  async getWorkLogPresets() {
+    return [];
+  }
+
   async getApprovals() {
     return this.table("approval_request");
   }

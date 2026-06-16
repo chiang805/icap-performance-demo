@@ -31,6 +31,10 @@ export class DataService {
     throw new Error("DataService.getWorkLogs must be implemented");
   }
 
+  async getWorkLogPresets() {
+    throw new Error("DataService.getWorkLogPresets must be implemented");
+  }
+
   async getApprovals() {
     throw new Error("DataService.getApprovals must be implemented");
   }
