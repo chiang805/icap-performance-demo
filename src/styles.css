@@ -359,7 +359,9 @@ h2 {
   margin-left: 36px;
 }
 
-.level-M {
+.level-M,
+.level-M_D,
+.level-M_P {
   margin-left: 54px;
 }
 
@@ -392,6 +394,133 @@ th {
   text-align: center;
 }
 
+.scope-tabs .active-soft,
+.active-soft {
+  background: #dcefed;
+  border-color: #9ac8c6;
+  color: var(--accent-strong);
+  font-weight: 800;
+}
+
+.row-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 0 0 auto;
+}
+
+.secondary {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--accent-strong);
+  padding: 9px 12px;
+  cursor: pointer;
+}
+
+.button-row {
+  width: 100%;
+  border: 1px solid var(--line);
+  text-align: left;
+  cursor: pointer;
+}
+
+.button-row.selected {
+  border-color: var(--accent);
+  background: #eef8f7;
+}
+
+.definition-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.mini-card {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 12px;
+  background: #fbfcfd;
+}
+
+.mini-card strong,
+.mini-card span {
+  display: block;
+}
+
+.mini-card span {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.bar {
+  height: 10px;
+  border-radius: 999px;
+  background: var(--surface-soft);
+  overflow: hidden;
+  margin: 10px 0;
+}
+
+.bar span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--accent);
+}
+
+.demo-form {
+  display: grid;
+  gap: 12px;
+}
+
+.demo-form label {
+  display: grid;
+  gap: 6px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.demo-form input,
+.demo-form textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 10px 12px;
+  color: var(--text);
+  background: #fff;
+}
+
+.demo-form textarea {
+  min-height: 78px;
+  resize: vertical;
+}
+
+.detail-box {
+  display: grid;
+  gap: 10px;
+}
+
+.detail-box strong,
+.detail-box span {
+  display: block;
+}
+
+.detail-box span,
+.detail-box p {
+  color: var(--muted);
+}
+
+.detail-box h3 {
+  margin: 8px 0 0;
+  font-size: 15px;
+}
+
+.compact table {
+  min-width: 620px;
+}
+
 .error {
   padding: 40px;
 }
@@ -414,6 +543,10 @@ th {
   .grid.two {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .definition-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 680px) {
@@ -424,7 +557,8 @@ th {
 
   .topbar,
   .row-card,
-  .reason-box {
+  .reason-box,
+  .row-actions {
     flex-direction: column;
     align-items: stretch;
   }
@@ -450,7 +584,13 @@ th {
 
   .level-G,
   .level-S,
-  .level-M {
+  .level-M,
+  .level-M_D,
+  .level-M_P {
     margin-left: 0;
+  }
+
+  .definition-grid {
+    grid-template-columns: 1fr;
   }
 }
